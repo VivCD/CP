@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<ctype.h>
+
+int main()
+{
+	unsigned c;
+	
+	while ((c = getchar()) != EOF)
+	{
+		if (c == '(') 
+		{ 
+			putchar(c);
+			printf("\n");
+		}
+		else {
+			     if (c == ')')
+				 {
+					 printf("\n");
+					 putchar(c);
+					 printf("\n");
+				 }
+			else 
+				 {
+					 putchar(c); 
+					 if ((c = getchar()) == ')')
+						 printf("\n");
+					 else putchar(c);
+				 }
+		}
+	}
+
+}
